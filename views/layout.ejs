@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <header>
+      <h1> Express Users </h1>
+      <nav>
+        <a href='/'> Home </a>
+        <br>
+
+  <% if (typeof currentUser === 'object') { %>
+        <a href='/rooms/new'> Add a new room </a>
+        <br>
+        <a href='/logout'> Log Out </a>
+        <br>
+        <a href="/special"> Page for Users! </a>
+        <br>
+    <% } else { %>
+        <a href='/signup'> Sign Up </a>
+        <br>
+
+        <a href='/login'> Log In </a>
+        <% } %>
+        <br>
+      </nav>
+    </header>
+
+
+
+    <%- body %>
+
+
+
+    <footer>
+      <p> Made with love at Ironhack. </p>
+    </footer>
+  </body>
+</html>

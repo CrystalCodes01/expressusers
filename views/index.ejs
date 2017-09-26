@@ -1,0 +1,11 @@
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<!--Check if we got the logged in user -->
+<% if (typeof currentUser === 'object') { %>
+  <p> Hello, <%= currentUser.username %> </p>
+<% } else { %>
+  <h3> You should Log In! </h3>
+
+  <a href='/login'> Log In here! </a>
+<% } %>
